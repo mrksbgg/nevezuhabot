@@ -18,11 +18,10 @@ app = Client(
     bot_token=bot_token
 )
 
-# этот бот был сделан за минут 5, и то на основе из другого моего бота
+# этот бот был сделан за минут 5, простите за говнокод
 @app.on_message()
 def nevezuha(client, message):
     app.send_video(message.chat.id, "nevezuha.mp4")
-
 
 if __name__ == '__main__':
     my_handler = MessageHandler(nevezuha)
