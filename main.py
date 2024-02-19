@@ -32,6 +32,7 @@ if __name__ == '__main__':
     except sqlite3.OperationalError as e:
         print(f"[Error] Ошибка: Сессия занята другим процессом! ({e})")
         os.remove("nevezuhabot.session")
+        print("f[Info] Рестарт...")
         app.start()
         me = app.get_me()
     print(f"[Info] Бот был запущен и авторизован как {me.first_name} (@{me.username})")
